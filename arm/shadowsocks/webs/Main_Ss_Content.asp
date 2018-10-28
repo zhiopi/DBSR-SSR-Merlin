@@ -152,7 +152,7 @@ function pop_help() {
 				<b>梅林固件 - 菠萝云定制版插件 - ' + db_ss["ss_basic_version_local"] + '</b><br><br>\
 				本插件是支持<a target="_blank" href="https://github.com/shadowsocks/shadowsocks-libev" ><u>SS</u></a>、<a target="_blank" href="https://github.com/shadowsocksrr/shadowsocksr-libev"><u>SSR</u></a>、<a target="_blank" href="http://firmware.koolshare.cn/binary/koolgame"><u>KoolGame</u></a>、<a target="_blank" href="https://github.com/v2ray/v2ray-core"><u>V2Ray</u></a>四种客户端的文明上网、游戏加速工具。<br>\
 				本插件仅支持Merlin AM380 2.6.36.4内核的固件，请不要用于其它固件安装。<br>\
-				<a style="color:#e7bd16" target="_blank" href="https://www.dbsr.cf"><u>菠萝云官网</u></a>~<br><br>\
+				<a style="color:#e7bd16" target="_blank" href="https://www.dbsr.cf"><u>菠萝云官网</u></a><br><br>\
 				<a style="color:#e7bd16" target="_blank" href="mailto:admin@dbsr.cf"><u>问题反馈</u></a><br>\</div>'
 		});
 	});
