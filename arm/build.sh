@@ -57,7 +57,7 @@ do_build() {
 }
 
 do_backup(){
-	HISTORY_DIR="../../fancyss_history_package/fancyss_arm"
+	HISTORY_DIR="../../zhiopi_history_package/arm"
 	# backup latested package after pack
 	backup_version=`cat version | sed -n 1p`
 	backup_tar_md5=`cat version | sed -n 2p`
