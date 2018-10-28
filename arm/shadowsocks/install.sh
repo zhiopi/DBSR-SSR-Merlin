@@ -107,7 +107,7 @@ upgrade_ss_conf(){
 }
 
 if [ "$ss_basic_enable" == "1" ];then
-	echo_date 先关闭科学上网插件，保证文件更新成功!
+	echo_date 先关闭菠萝云插件，保证文件更新成功!
 	sh /koolshare/ss/ssconfig.sh stop
 fi
 
@@ -229,8 +229,8 @@ CUR_VERSION=`cat /koolshare/ss/version`
 dbus set ss_basic_version_local="$CUR_VERSION"
 dbus set softcenter_module_shadowsocks_install="4"
 dbus set softcenter_module_shadowsocks_version="$CUR_VERSION"
-dbus set softcenter_module_shadowsocks_title="科学上网"
-dbus set softcenter_module_shadowsocks_description="科学上网"
+dbus set softcenter_module_shadowsocks_title="菠萝云"
+dbus set softcenter_module_shadowsocks_description="菠萝云"
 dbus set softcenter_module_shadowsocks_home_url="Main_Ss_Content.asp"
 
 # 设置v2ray 版本号
@@ -240,7 +240,7 @@ dbus set ss_basic_v2ray_date="20180927"
 echo_date 一点点清理工作...
 rm -rf /tmp/shadowsocks* >/dev/null 2>&1
 dbus set ss_basic_install_status="0"
-echo_date 科学上网插件安装成功！
+echo_date 菠萝云插件安装成功！
 
 if [ "$ss_basic_enable" == "1" ];then
 	echo_date 重启ss！

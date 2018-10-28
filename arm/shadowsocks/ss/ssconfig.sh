@@ -98,7 +98,7 @@ close_in_five(){
 	dbus set ss_basic_enable="0"
 	disable_ss >/dev/null
 	echo_date "插件已关闭！！"
-	echo_date ======================= 梅林固件 - 【科学上网】 ========================
+	echo_date ======================= 梅林固件 - 【菠萝云】 ========================
 	unset_lock
 	exit
 }
@@ -231,7 +231,7 @@ kill_process(){
 ss_pre_start(){
 	lb_enable=`dbus get ss_lb_enable`
 	if [ "$lb_enable" == "1" ];then
-		echo_date ---------------------- 【科学上网】 启动前触发脚本 ----------------------
+		echo_date ---------------------- 【菠萝云】 启动前触发脚本 ----------------------
 		if [ `dbus get ss_basic_server | grep -o "127.0.0.1"` ] && [ `dbus get ss_basic_port` == `dbus get ss_lb_port` ];then
 			echo_date ss启动前触发:触发启动负载均衡功能！
 			#start haproxy
@@ -1940,7 +1940,7 @@ set_ss_trigger_job(){
 		remove_ss_trigger_job
 	else
 		if [ "$ss_basic_tri_reboot_policy" == "1" ];then
-			echo_date 设置每隔$ss_basic_tri_reboot_time分钟检查服务器IP地址，如果IP发生变化，则重启科学上网插件...
+			echo_date 设置每隔$ss_basic_tri_reboot_time分钟检查服务器IP地址，如果IP发生变化，则重启菠萝云插件...
 		else
 			echo_date 设置每隔$ss_basic_tri_reboot_time分钟检查服务器IP地址，如果IP发生变化，则重启dnsmasq...
 		fi
@@ -1975,7 +1975,7 @@ ss_post_start(){
 	for i in $(find ./ -name 'P*' | sort) ;
 	do
 		trap "" INT QUIT TSTP EXIT
-		echo_date ------------- 【科学上网】 启动后触发脚本: $i -------------
+		echo_date ------------- 【菠萝云】 启动后触发脚本: $i -------------
 		if [ -r "$i" ]; then
 			$i start
 		fi
@@ -1989,7 +1989,7 @@ ss_pre_stop(){
 	for i in $(find ./ -name 'P*' | sort -r) ;
 	do
 		trap "" INT QUIT TSTP EXIT
-		echo_date ------------- 【科学上网】 关闭前触发脚本: $i ------------
+		echo_date ------------- 【菠萝云】 关闭前触发脚本: $i ------------
 		if [ -r "$i" ]; then
 			$i stop
 		fi
@@ -2002,7 +2002,7 @@ detect(){
 	if [ "`nvram get jffs2_scripts`" != "1" ];then
 		echo_date "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 		echo_date "+     发现你未开启Enable JFFS custom scripts and configs选项！     +"
-		echo_date "+    【软件中心】和【科学上网】插件都需要此项开启才能正常使用！！         +"
+		echo_date "+    【软件中心】和【菠萝云】插件都需要此项开启才能正常使用！！         +"
 		echo_date "+     请前往【系统管理】- 【系统设置】去开启，并重启路由器后重试！！      +"
 		echo_date "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 		close_in_five
@@ -2087,9 +2087,9 @@ umount_dnsmasq_now(){
 }
 
 disable_ss(){
-	echo_date ======================= 梅林固件 - 【科学上网】 ========================
+	echo_date ======================= 梅林固件 - 【菠萝云】 ========================
 	echo_date
-	echo_date ------------------------- 关闭【科学上网】 -----------------------------
+	echo_date ------------------------- 关闭【菠萝云】 -----------------------------
 	nvram set ss_mode=0
 	dbus set dns2socks=0
 	dbus remove ss_basic_server_ip
@@ -2102,16 +2102,16 @@ disable_ss(){
 	restart_dnsmasq
 	flush_nat
 	kill_cron_job
-	echo_date ------------------------ 【科学上网】已关闭 ----------------------------
+	echo_date ------------------------ 【菠萝云】已关闭 ----------------------------
 }
 
 apply_ss(){
 	# router is on boot
 	WAN_ACTION=`ps|grep /jffs/scripts/wan-start|grep -v grep`
 	# now stop first
-	echo_date ======================= 梅林固件 - 【科学上网】 ========================
+	echo_date ======================= 梅林固件 - 【菠萝云】 ========================
 	echo_date
-	echo_date ------------------------- 启动【科学上网】 -----------------------------
+	echo_date ------------------------- 启动【菠萝云】 -----------------------------
 	ss_pre_stop
 	nvram set ss_mode=0
 	dbus set dns2socks=0
@@ -2124,11 +2124,11 @@ apply_ss(){
 	restart_dnsmasq
 	flush_nat
 	kill_cron_job
-	#echo_date ------------------------ 【科学上网】已关闭 ----------------------------
+	#echo_date ------------------------ 【菠萝云】已关闭 ----------------------------
 	# pre-start
 	ss_pre_start
 	# start
-	#echo_date ------------------------- 启动 【科学上网】 ----------------------------
+	#echo_date ------------------------- 启动 【菠萝云】 ----------------------------
 	detect
 	resolv_server_ip
 	ss_arg
@@ -2154,7 +2154,7 @@ apply_ss(){
 	set_ss_trigger_job
 	# post-start
 	ss_post_start
-	echo_date ------------------------ 【科学上网】 启动完毕 ------------------------
+	echo_date ------------------------ 【菠萝云】 启动完毕 ------------------------
 }
 
 # for debug
@@ -2194,12 +2194,12 @@ case $ACTION in
 start)
 	set_lock
 	if [ "$ss_basic_enable" == "1" ];then
-		logger "[软件中心]: 启动科学上网插件！"
+		logger "[软件中心]: 启动菠萝云插件！"
 		set_ulimit >> "$LOG_FILE"
 		apply_ss >> "$LOG_FILE"
 		write_numbers >> "$LOG_FILE"
 	else
-		logger "[软件中心]: 科学上网插件未开启，不启动！"
+		logger "[软件中心]: 菠萝云插件未开启，不启动！"
 	fi
 	#get_status >> /tmp/ss_start.txt
 	unset_lock
@@ -2212,7 +2212,7 @@ stop)
 	echo_date 你已经成功关闭shadowsocks服务~
 	echo_date See you again!
 	echo_date
-	echo_date ======================= 梅林固件 - 【科学上网】 ========================
+	echo_date ======================= 梅林固件 - 【菠萝云】 ========================
 	#get_status >> /tmp/ss_start.txt
 	unset_lock
 	;;
@@ -2224,7 +2224,7 @@ restart)
 	echo_date
 	echo_date "Across the Great Wall we can reach every corner in the world!"
 	echo_date
-	echo_date ======================= 梅林固件 - 【科学上网】 ========================
+	echo_date ======================= 梅林固件 - 【菠萝云】 ========================
 	#get_status >> /tmp/ss_start.txt
 	unset_lock
 	;;

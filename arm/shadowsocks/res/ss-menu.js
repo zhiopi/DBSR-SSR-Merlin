@@ -100,7 +100,7 @@ function browser_compatibility1(){
 
 function menu_hook() {
 	browser_compatibility1();
-	tabtitle[tabtitle.length - 1] = new Array("", "科学上网设置", "负载均衡设置", "Socks5设置", "__INHERIT__");
+    tabtitle[tabtitle.length - 1] = new Array("", "菠萝云设置", "负载均衡设置", "Socks5设置", "__INHERIT__");
 	tablink[tablink.length - 1] = new Array("", "Main_Ss_Content.asp", "Main_Ss_LoadBlance.asp", "Main_SsLocal_Content.asp");
 }
 
@@ -274,8 +274,8 @@ function LoadingSSProgress(seconds) {
 	action = db_ss["ss_basic_action"];
 	document.getElementById("LoadingBar").style.visibility = "visible";
 	if (action == 0) {
-		document.getElementById("loading_block3").innerHTML = "科学上网功能关闭中 ..."
-		$("#loading_block2").html("<li><font color='#ffcc00'><a href='https://github.com/hq450/fancyss' target='_blank'></font>插件工作有问题？请到<em>GITHUB</em>提交issue...</font></li>");
+        document.getElementById("loading_block3").innerHTML = "菠萝云功能关闭中 ..."
+        $("#loading_block2").html("<li><font color='#ffcc00'><a href='https://github.com/zhiopi/DBSR-SSR-Merlin/issues/new' target='_blank'></font>插件工作有问题？请到<em>github<em>提交issue...</font></li>");
 	} else if (action == 1) {
 		document.getElementById("loading_block3").innerHTML = "gfwlist模式启用中 ..."
 		$("#loading_block2").html("<li><font color='#ffcc00'>此期间请勿访问屏蔽网址，以免污染DNS进入缓存</font></li><li><font color='#ffcc00'>尝试不同的DNS解析方案，可以达到最佳的效果哦...</font></li><li><font color='#ffcc00'>请等待日志显示完毕，并出现自动关闭按钮！</font></li><li><font color='#ffcc00'>在此期间请不要刷新本页面，不然可能导致问题！</font></li>");
@@ -287,22 +287,22 @@ function LoadingSSProgress(seconds) {
 		$("#loading_block2").html("<li><font color='#ffcc00'>此期间请勿访问屏蔽网址，以免污染DNS进入缓存</font></li><li><font color='#ffcc00'>为确保游戏工作，请确保你的SS账号支持UDP转发...</font></li><font color='#ffcc00'><li>请等待日志显示完毕，并出现自动关闭按钮！</font></li><li><font color='#ffcc00'>在此期间请不要刷新本页面，不然可能导致问题！</font></li>");
 	} else if (action == 5) {
 		document.getElementById("loading_block3").innerHTML = "全局模式启用中 ..."
-		$("#loading_block2").html("<li><font color='#ffcc00'>此期间请勿访问屏蔽网址，以免污染DNS进入缓存</font></li><li><font color='#ffcc00'>此模式非科学上网方式，会影响国内网页速度...</font></li><li><font color='#ffcc00'>注意：全局模式并非VPN，只支持TCP流量转发...</font></li><li><font color='#ffcc00'>请等待日志显示完毕，并出现自动关闭按钮！</font></li><li><font color='#ffcc00'>在此期间请不要刷新本页面，不然可能导致问题！</font></li>");
+		$("#loading_block2").html("<li><font color='#ffcc00'>此期间请勿访问屏蔽网址，以免污染DNS进入缓存</font></li><li><font color='#ffcc00'>此模式非文明上网方式，会影响国内网页速度...</font></li><li><font color='#ffcc00'>注意：全局模式并非VPN，只支持TCP流量转发...</font></li><li><font color='#ffcc00'>请等待日志显示完毕，并出现自动关闭按钮！</font></li><li><font color='#ffcc00'>在此期间请不要刷新本页面，不然可能导致问题！</font></li>");
 	} else if (action == 6) {
 		document.getElementById("loading_block3").innerHTML = "回国模式启用中 ..."
 		$("#loading_block2").html("<li><font color='#ffcc00'>请勿刷新本页面，正在应用配置...</font></li>");
 	} else if (action == 7) {
-		document.getElementById("loading_block3").innerHTML = "科学上网插件升级 ..."
+        document.getElementById("loading_block3").innerHTML = "菠萝云插件升级 ..."
 		$("#loading_block2").html("<li><font color='#ffcc00'>请勿刷新本页面，等待脚本运行完毕后再刷新！</font></li><li><font color='#ffcc00'>升级服务会自动检测最新版本并下载升级...</font></li>");
 	} else if (action == 8) {
-		document.getElementById("loading_block3").innerHTML = "科学上网规则更新 ..."
+        document.getElementById("loading_block3").innerHTML = "菠萝云规则更新 ..."
 		$("#loading_block2").html("<li><font color='#ffcc00'>请勿刷新本页面，等待脚本运行完毕后再刷新！</font></li><li><font color='#ffcc00'>正在自动检测github上的更新...</font></li>");
 	} else if (action == 9) {
-		document.getElementById("loading_block3").innerHTML = "恢复科学上网配置 ..."
+        document.getElementById("loading_block3").innerHTML = "恢复菠萝云配置 ..."
 		$("#loading_block2").html("<li><font color='#ffcc00'>请勿刷新本页面，配置恢复后需要重新提交！</font></li><li><font color='#ffcc00'>恢复配置中...</font></li>");
 	} else if (action == 10) {
-		document.getElementById("loading_block3").innerHTML = "清空科学上网配置 ..."
-		$("#loading_block2").html("<li><font color='#ffcc00'>请勿刷新本页面，正在清空科学上网配置...</font></li>");
+        document.getElementById("loading_block3").innerHTML = "清空菠萝云配置 ..."
+        $("#loading_block2").html("<li><font color='#ffcc00'>请勿刷新本页面，正在清空菠萝云配置...</font></li>");
 	} else if (action == 11) {
 		document.getElementById("loading_block3").innerHTML = "插件打包中 ..."
 		$("#loading_block2").html("<li><font color='#ffcc00'>打包时间较长，请稍等...</font></li><li><font color='#ffcc00'>打包的插件可以用于离线安装...</font></li>");
@@ -443,7 +443,7 @@ function openssHint(itemNum) {
 		statusmenu += "</br>&nbsp;&nbsp;&nbsp;&nbsp;chmod +x /tmp/shadowsocks/install.sh";
 		statusmenu += "</br>&nbsp;&nbsp;&nbsp;&nbsp;sh /tmp/shadowsocks/install.sh";
 		statusmenu += "</br></br>最后一条命令输入完后不会有任何打印信息。";
-		statusmenu += "</br>回滚其它版本号，请参考<a href='https://github.com/hq450/fancyss_history_package/tree/master/fancyss_arm' target='_blank'><u><font color='#00F'>版本历史列表</font></u></a>";
+        statusmenu += "</br>回滚其它版本号，请参考<a href='https://github.com/zhiopi/DBSR-SSR-Merlin/commits/master/arm' target='_blank'><u><font color='#00F'>版本历史列表</font></u></a>";
 		_caption = "shadowsocks for merlin 版本";
 	} else if (itemNum == 13) {
 		statusmenu = "&nbsp;&nbsp;&nbsp;&nbsp;SSR表示shadowwocksR-libev，相比较原版shadowwocksR-libev，其提供了强大的协议混淆插件，让你避开gfw的侦测。"
@@ -632,7 +632,7 @@ function openssHint(itemNum) {
 		statusmenu = "此处定义ss状态检测更新时间间隔，默认5秒。"
 		_caption = "状态更新间隔";
 	} else if (itemNum == 44) {
-		statusmenu = "shadowsocks规则更新包括了gfwlist模式中用到的<a href='https://github.com/hq450/fancyss/blob/master/rules/gfwlist.conf' target='_blank'><font color='#00F'><u>gfwlist</u></font></a>，在大陆白名单模式和游戏模式中用到的<a href='https://github.com/hq450/fancyss/blob/master/rules/chnroute.txt' target='_blank'><u><font color='#00F'>chnroute</font></u></a>和<a href='https://github.com/hq450/fancyss/blob/master/rules/cdn.txt' target='_blank'><u><font color='#00F'>国内cdn名单</font></u></a>"
+		statusmenu = "shadowsocks规则更新包括了gfwlist模式中用到的<a href='https://github.com/zhiopi/DBSR-SSR-Merlin/blob/master/rules/gfwlist.conf' target='_blank'><font color='#00F'><u>gfwlist</u></font></a>，在大陆白名单模式和游戏模式中用到的<a href='https://github.com/zhiopi/DBSR-SSR-Merlin/blob/master/rules/chnroute.txt' target='_blank'><u><font color='#00F'>chnroute</font></u></a>和<a href='https://github.com/zhiopi/DBSR-SSR-Merlin/blob/master/rules/cdn.txt' target='_blank'><u><font color='#00F'>国内cdn名单</font></u></a>"
 		statusmenu += "</br>建议更新时间在凌晨闲时进行，以避免更新时重启ss服务器造成网络访问问题。"
 		_caption = "shadowsocks规则自动更新";
 	} else if (itemNum == 45) {

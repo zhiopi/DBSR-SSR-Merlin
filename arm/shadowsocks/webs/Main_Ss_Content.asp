@@ -7,7 +7,7 @@
 <meta HTTP-EQUIV="Expires" CONTENT="-1"/>
 <link rel="shortcut icon" href="images/favicon.png"/>
 <link rel="icon" href="images/favicon.png"/>
-<title>【科学上网】</title>
+<title>【菠萝云】</title>
 <link rel="stylesheet" type="text/css" href="index_style.css"/>
 <link rel="stylesheet" type="text/css" href="form_style.css"/>
 <link rel="stylesheet" type="text/css" href="usp_style.css"/>
@@ -67,22 +67,22 @@ function detect(){
 	if(jff2_scripts != 1){ //没有开启 JFFS scripts选项
 		hide_elem();
 		E("warn_msg_1").style.display = "";
-		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【科学上网】插件不可用！因为你没有开启Enable JFFS custom scripts and configs选项！</h2><h2>请前往【系统管理】-<a href="Advanced_System_Content.asp"><u><em>【系统设置】</em></u></a>开启此选项再使用软件中心！！</h2>');
+		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【菠萝云】插件不可用！因为你没有开启Enable JFFS custom scripts and configs选项！</h2><h2>请前往【系统管理】-<a href="Advanced_System_Content.asp"><u><em>【系统设置】</em></u></a>开启此选项再使用软件中心！！</h2>');
 	}
 	if(sw_mode != 1){ //使用的不是路由模式
 		hide_elem();
 		E("warn_msg_1").style.display = "";
-		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【科学上网】插件不可用！因为你的设备工作在非路由模式下！</h2><h2>请前往【系统管理】-<a href="Advanced_OperationMode_Content.asp"><u><em>【操作模式】</em></u></a>中选择无线路由器模式！才能正常使用本插件！</h2>');
+		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【菠萝云】插件不可用！因为你的设备工作在非路由模式下！</h2><h2>请前往【系统管理】-<a href="Advanced_OperationMode_Content.asp"><u><em>【操作模式】</em></u></a>中选择无线路由器模式！才能正常使用本插件！</h2>');
 	}
 	if(dnsfilter_enable == 1){ //开启了DNSFilter
 		hide_elem();
 		E("warn_msg_1").style.display = "";
-		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【科学上网】插件不可用！因为开启了DNS过滤！</h2><h2>请前往【智能网络卫士】-<a href="DNSFilter.asp"><u><em>【DNS Filtering】</em></u></a>中关闭DNS过滤！才能正常使用本插件！</h2>');
+		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【菠萝云】插件不可用！因为开启了DNS过滤！</h2><h2>请前往【智能网络卫士】-<a href="DNSFilter.asp"><u><em>【DNS Filtering】</em></u></a>中关闭DNS过滤！才能正常使用本插件！</h2>');
 	}
 	if(fw_version < 7.2){ //固件版本过低，不兼容
 		hide_elem();
 		E("warn_msg_1").style.display = "";
-		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【科学上网】插件不可用！因为你的固件版本低于X7.2！</h2><h2>请更新最新固件！</h2>');
+		$('#warn_msg_1').html('<h2><font color="#FF9900">错误！</font></h2><h2>【菠萝云】插件不可用！因为你的固件版本低于X7.2！</h2><h2>请更新最新固件！</h2>');
 	}
 }
 
@@ -149,15 +149,11 @@ function pop_help() {
 			btnAlign: 'c',
 			moveType: 1,
 			content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">\
-				<b>梅林固件 - 科学上网插件 - ' + db_ss["ss_basic_version_local"] + '</b><br><br>\
-				本插件是支持<a target="_blank" href="https://github.com/shadowsocks/shadowsocks-libev" ><u>SS</u></a>、<a target="_blank" href="https://github.com/shadowsocksrr/shadowsocksr-libev"><u>SSR</u></a>、<a target="_blank" href="http://firmware.koolshare.cn/binary/koolgame"><u>KoolGame</u></a>、<a target="_blank" href="https://github.com/v2ray/v2ray-core"><u>V2Ray</u></a>四种客户端的科学上网、游戏加速工具。<br>\
+				<b>梅林固件 - 菠萝云定制版插件 - ' + db_ss["ss_basic_version_local"] + '</b><br><br>\
+				本插件是支持<a target="_blank" href="https://github.com/shadowsocks/shadowsocks-libev" ><u>SS</u></a>、<a target="_blank" href="https://github.com/shadowsocksrr/shadowsocksr-libev"><u>SSR</u></a>、<a target="_blank" href="http://firmware.koolshare.cn/binary/koolgame"><u>KoolGame</u></a>、<a target="_blank" href="https://github.com/v2ray/v2ray-core"><u>V2Ray</u></a>四种客户端的文明上网、游戏加速工具。<br>\
 				本插件仅支持Merlin AM380 2.6.36.4内核的固件，请不要用于其它固件安装。<br>\
-				使用本插件有任何问题，可以前往<a style="color:#e7bd16" target="_blank" href="https://github.com/hq450/fancyss/issues"><u>github的issue页面</u></a>反馈~<br><br>\
-				● SS/SSR一键脚本：<a style="color:#e7bd16" target="_blank" href="https://github.com/onekeyshell/kcptun_for_ss_ssr/tree/master"><u>一键安装KCPTUN for SS/SSR on Linux</u></a><br>\
-				● koolgame一键脚本：<a style="color:#e7bd16" target="_blank" href="https://github.com/clangcn/game-server"><u>一键安装koolgame服务器端脚本，完美支持nat2</u></a><br>\
-				● V2Ray一键脚本：<a style="color:#e7bd16" target="_blank" href="https://233blog.com/post/17/"><u>V2Ray 搭建和优化详细图文教程</u></a><br>\
-				● 插件交流：<a style="color:#e7bd16" target="_blank" href="https://t.me/joinchat/AAAAAEC7pgV9vPdPcJ4dJw"><u>加入telegram群组</u></a><br><br>\
-				我们的征途是星辰大海 ^_^</div>'
+				<a style="color:#e7bd16" target="_blank" href="https://www.dbsr.cf"><u>菠萝云官网</u></a>~<br><br>\
+				<a style="color:#e7bd16" target="_blank" href="mailto:admin@dbsr.cf"><u>问题反馈</u></a><br>\</div>'
 		});
 	});
 }
@@ -1954,7 +1950,7 @@ function updatelist(action) {
 
 function version_show() {
 	$.ajax({
-		url: 'https://raw.githubusercontent.com/hq450/fancyss/master/fancyss_arm/config.json.js',
+		url: 'https://raw.githubusercontent.com/zhiopi/DBSR-SSR-Merlin/master/arm/config.json.js',
 		type: 'GET',
 		dataType: 'json',
 		success: function(res) {
@@ -2334,7 +2330,7 @@ function toggle_func() {
 		});
 	$("#update_log").click(
 		function() {
-			window.open("https://github.com/hq450/fancyss/blob/master/fancyss_arm/Changelog.txt");
+			window.open("https://github.com/zhiopi/DBSR-SSR-Merlin/tree/master/arm/Changelog.txt");
 		});
 	$("#log_content2").click(
 		function() {
@@ -3045,16 +3041,16 @@ function set_cron(action) {
 								<tr>
 									<td bgcolor="#4D595D" colspan="3" valign="top">
 										<div>&nbsp;</div>
-										<div class="formfonttitle">梅林固件 - 科学上网插件</div>
+										<div class="formfonttitle">梅林固件 - 菠萝云定制版插件</div>
 										<div style="float:right; width:15px; height:25px;margin-top:-20px">
 											<img id="return_btn" onclick="reload_Soft_Center();" align="right" style="cursor:pointer;position:absolute;margin-left:-30px;margin-top:-25px;" title="返回软件中心" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'"></img>
 										</div>
 										<div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-										<div class="SimpleNote" id="head_illustrate">本插件是支持<a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank"><em><u>SS</u></em></a>、<a href="https://github.com/shadowsocksrr/shadowsocksr-libev" target="_blank"><em><u>SSR</u></em></a>、<a href="http://firmware.koolshare.cn/binary/koolgame/" target="_blank"><em><u>KoolGame</u></em></a>、<a href="https://github.com/v2ray/v2ray-core" target="_blank"><em><u>V2Ray</u></em></a>四种客户端的科学上网、游戏加速工具。</div>
+										<div class="SimpleNote" id="head_illustrate">本插件是支持<a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank"><em><u>SS</u></em></a>、<a href="https://github.com/shadowsocksrr/shadowsocksr-libev" target="_blank"><em><u>SSR</u></em></a>、<a href="http://firmware.koolshare.cn/binary/koolgame/" target="_blank"><em><u>KoolGame</u></em></a>、<a href="https://github.com/v2ray/v2ray-core" target="_blank"><em><u>V2Ray</u></em></a>四种客户端的文明上网、游戏加速工具。</div>
 										<div style="margin-top: 0px;text-align: center;font-size: 18px;margin-bottom: 0px;" class="formfontdesc" id="cmdDesc"></div>
 										<!-- this is the popup area for status -->
 										<div id="detail_status"  class="content_status" style="box-shadow: 3px 3px 10px #000;margin-top: 0px;display: none;">
-											<div class="user_title">【科学上网】状态检测</div>
+											<div class="user_title">【菠萝云】状态检测</div>
 											<div style="margin-left:15px"><i>&nbsp;&nbsp;目前本功能支持ss相关进程状态和iptables表状态检测。</i></div>
 											<div id="user_tr" style="margin: 10px 10px 10px 10px;width:98%;text-align:center;overflow:hidden">
 												<textarea cols="63" rows="36" wrap="off" id="proc_status" style="width:98%;padding-left:13px;padding-right:33px;border:0px solid #222;font-family:'Lucida Console'; font-size:11px;background: transparent;color:#FFFFFF;outline: none;overflow-x:hidden;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
@@ -3072,7 +3068,7 @@ function set_cron(action) {
 												</tr>
 												</thead>
 												<tr>
-												<th id="ss_switch"><a class="hintstyle" href="javascript:void(0);" onclick="openssHint(10)">科学上网开关</a></th>
+												<th id="ss_switch"><a class="hintstyle" href="javascript:void(0);" onclick="openssHint(10)">菠萝云开关</a></th>
 													<td colspan="2">
 														<div class="switch_field" style="display:table-cell;float: left;">
 															<label for="ss_basic_enable">
@@ -3094,7 +3090,7 @@ function set_cron(action) {
 															</a>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:270px;position: absolute;padding: 5.5px 0px;">
-															<a type="button" class="ss_btn" target="_blank" href="https://github.com/hq450/fancyss/blob/master/fancyss_arm/Changelog.txt">更新日志</a>
+															<a type="button" class="ss_btn" target="_blank" href="https://github.com/zhiopi/DBSR-SSR-Merlin/tree/master/arm/Changelog.txt">更新日志</a>
 														</div>
 														<div style="display:table-cell;float: left;margin-left:350px;position: absolute;padding: 5.5px 0px;">
 															<a type="button" class="ss_btn" href="javascript:void(0);" onclick="pop_help()">插件帮助</a>
@@ -4415,7 +4411,7 @@ taobao.com
 													<th id="gfw_nu1" width="35%">gfwlist域名数量</th>
 													<td id="gfw_nu2">
 															<% nvram_get("ipset_numbers"); %>&nbsp;条，最后更新版本：
-															<a href="https://github.com/hq450/fancyss/blob/master/rules/gfwlist.conf" target="_blank">
+															<a href="https://github.com/zhiopi/DBSR-SSR-Merlin/blob/master/rules/gfwlist.conf" target="_blank">
 																<i><% nvram_get("update_ipset"); %></i>
 														</a>
 													</td>
@@ -4425,7 +4421,7 @@ taobao.com
 												<td id="chn_nu2">
 													<p>
 														<% nvram_get("chnroute_numbers"); %>&nbsp;行，最后更新版本：
-														<a href="https://github.com/hq450/fancyss/blob/master/rules/chnroute.txt" target="_blank">
+														<a href="https://github.com/zhiopi/DBSR-SSR-Merlin/blob/master/rules/chnroute.txt" target="_blank">
 															<i><% nvram_get("update_chnroute"); %></i>
 														</a>
 													</p>
@@ -4436,7 +4432,7 @@ taobao.com
 													<td id="cdn_nu2">		
 														<p>		
 														<% nvram_get("cdn_numbers"); %>&nbsp;条，最后更新版本：		
-															<a href="https://github.com/hq450/fancyss/blob/master/rules/cdn.txt" target="_blank">		
+															<a href="https://github.com/zhiopi/DBSR-SSR-Merlin/blob/master/rules/cdn.txt" target="_blank">		
 																<i><% nvram_get("update_cdn"); %></i>		
 															</a>		
 														</p>		

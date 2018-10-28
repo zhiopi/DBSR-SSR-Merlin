@@ -2,8 +2,8 @@
 
 MODULE=shadowsocks
 VERSION=`cat ./shadowsocks/ss/version|sed -n 1p`
-TITLE=科学上网
-DESCRIPTION=科学上网
+TITLE=菠萝云
+DESCRIPTION=菠萝云
 HOME_URL=Main_Ss_Content.asp
 
 cp_rules(){
@@ -49,7 +49,7 @@ do_build() {
 	"home_url":"$HOME_URL",
 	"md5":"$md5value",
 	"name":"$MODULE",
-	"tar_url": "https://raw.githubusercontent.com/hq450/fancyss/master/fancyss_arm/shadowsocks.tar.gz", 
+	"tar_url": "https://raw.githubusercontent.com/zhiopi/DBSR-SSR-Merlin/master/arm//shadowsocks.tar.gz", 
 	"title":"$TITLE",
 	"version":"$VERSION"
 	}
