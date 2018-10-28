@@ -9,6 +9,6 @@ sudo apt-get install gcc-arm-linux-gnueabihf
 
 sudo apt-get install g++-arm-linux-gnueabihf
 
-Then enter the source code folder.run build.sh
+Then enter the source code folder.Run build.sh
 
 Enjoy harmonious internet!
