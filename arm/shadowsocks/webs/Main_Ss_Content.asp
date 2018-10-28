@@ -3046,7 +3046,7 @@ function set_cron(action) {
 											<img id="return_btn" onclick="reload_Soft_Center();" align="right" style="cursor:pointer;position:absolute;margin-left:-30px;margin-top:-25px;" title="返回软件中心" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'"></img>
 										</div>
 										<div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-										<div class="SimpleNote" id="head_illustrate">点击直达：<a href="https://www.dbsr.cf" target="_blank"><em><u>菠萝云官网</u></em></a>； 问题反馈：<a href="mailto:admin@dbsr.cf" target="_blank"><em><u>站长邮箱</u></em></a>。</div>
+										<div class="SimpleNote" id="head_illustrate">点击直达：<a href="https://www.dbsr.cf" target="_blank"><em><u>菠萝云官网</u></em></a>；问题反馈：<a href="mailto:admin@dbsr.cf" target="_blank"><em><u>站长邮箱</u></em></a>；软件下载：<a href="https://github.com/zhiopi/DBSR-SSR-Merlin/wiki" target="_blank"><em><u>维基页面</u></em></a>。</div>
 										<div style="margin-top: 0px;text-align: center;font-size: 18px;margin-bottom: 0px;" class="formfontdesc" id="cmdDesc"></div>
 										<!-- this is the popup area for status -->
 										<div id="detail_status"  class="content_status" style="box-shadow: 3px 3px 10px #000;margin-top: 0px;display: none;">
