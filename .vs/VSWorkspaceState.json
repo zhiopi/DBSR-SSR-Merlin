@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\arm"
   ],
-  "SelectedNode": "\\arm",
+  "SelectedNode": "\\arm\\config.json.js",
   "PreviewInSolutionExplorer": false
 }
